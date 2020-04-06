@@ -9,9 +9,7 @@ th {
 	text-align: left;
 	padding: 18px;
 }
-tr:nth-child(even) {
-	background-color: #dddddd;
-}
+
 ul {
 	list-style-type: none;
 	margin: 0;

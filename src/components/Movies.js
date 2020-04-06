@@ -3,17 +3,18 @@ import PropTypes from 'prop-types';
 import '../App.css';
 
 import MovieItem from './MovieItem';
-function Movies({ films }) {
+function Movies({ films, blogMsg, blogMessage }) {
 	return (
 		<Fragment>
 			<center>
-				<h1>Avengers Movies</h1>
+				<h1>{blogMessage}</h1>
+				<button onClick={blogMsg}> Hit Me</button> <br />
 				<table>
 					<thead>
 						<tr>
-							<th>Film Name</th>
-							<th>Release date</th>
-							<th>Director</th>
+							<th> Id</th>
+							<th>Title</th>
+							<th>Content</th>
 						</tr>
 					</thead>
 					<tbody>{films.map((film) => <MovieItem film={film} key={film.id} />)}</tbody>

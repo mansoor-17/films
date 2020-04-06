@@ -9,7 +9,7 @@ export default function NavBar() {
 				</Link>
 			</li>
 			<li>
-				<Link to="/movies">Movies</Link>
+				<Link to="/movies">Blogs</Link>
 			</li>
 			<li>
 				<Link to="/books">Books</Link>

@@ -5,9 +5,9 @@ export default function MovieItem({ film }) {
 	return (
 		<Fragment>
 			<tr>
-				<td>{film.name}</td>
-				<td>{film.date}</td>
-				<td>{film.director}</td>
+				<td>{film.id}</td>
+				<td>{film.title}</td>
+				<td>{film.body}</td>
 			</tr>
 		</Fragment>
 	);
