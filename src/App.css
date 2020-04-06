@@ -9,7 +9,9 @@ th {
 	text-align: left;
 	padding: 18px;
 }
-
+tr:nth-child(odd) {
+	background-color: #dddddd;
+}
 ul {
 	list-style-type: none;
 	margin: 0;

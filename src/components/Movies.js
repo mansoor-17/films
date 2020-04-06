@@ -1,14 +1,21 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React, { Fragment, useContext, useEffect } from 'react';
 import '../App.css';
-
+import MoviesContext from '../context/Movies/MoviesContext';
 import MovieItem from './MovieItem';
-function Movies({ films, blogMsg, blogMessage }) {
+function Movies() {
+	const moviesContext = useContext(MoviesContext);
+	const { films, blogMessage, getMovies, setMessage } = moviesContext;
+
+	useEffect(() => {
+		getMovies();
+		//eslint-disable-next-line
+	}, []);
+
 	return (
 		<Fragment>
 			<center>
 				<h1>{blogMessage}</h1>
-				<button onClick={blogMsg}> Hit Me</button> <br />
+				<button onClick={setMessage}> Hit Me</button> <br />
 				<table>
 					<thead>
 						<tr>
@@ -24,7 +31,4 @@ function Movies({ films, blogMsg, blogMessage }) {
 	);
 }
 
-Movies.propTypes = {
-	films: PropTypes.array.isRequired
-};
 export default Movies;
