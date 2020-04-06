@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Movies from './components/Movies';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [ films, setFilms ] = useState([
+		{
+			name: 'Iron Man',
+			date: 'May 2, 2008',
+			director: 'Jon Favreau'
+		},
+		{
+			name: 'The Incredible Hulk',
+			date: 'June 13, 2008',
+			director: 'Louis Leterrier'
+		},
+		{
+			name: 'Thor',
+			date: ' May 6, 2011',
+			director: 'Kenneth Branagh'
+		},
+		{
+			name: 'Captain America: The First Avenger',
+			date: 'July 22, 2011',
+			director: 'Joe Johnston'
+		},
+		{
+			name: 'Guardians of the Galaxy',
+			date: 'August 1, 2014',
+			director: 'James Gunn'
+		},
+		{
+			name: 'Ant-Man',
+			date: 'July 17, 2015',
+			director: 'Peyton Reed'
+		}
+	]);
+	
+	return (
+		<div>
+			<Movies films={films} />
+		</div>
+	);
 }
 
 export default App;
